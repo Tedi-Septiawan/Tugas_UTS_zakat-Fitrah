@@ -39,7 +39,9 @@
             this.textbox_username.AllowDrop = true;
             this.textbox_username.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textbox_username.CausesValidation = false;
+            this.textbox_username.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textbox_username.Location = new System.Drawing.Point(101, 70);
+            this.textbox_username.Multiline = true;
             this.textbox_username.Name = "textbox_username";
             this.textbox_username.Size = new System.Drawing.Size(212, 26);
             this.textbox_username.TabIndex = 0;
@@ -52,7 +54,9 @@
             this.textbox_password.AllowDrop = true;
             this.textbox_password.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textbox_password.CausesValidation = false;
+            this.textbox_password.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textbox_password.Location = new System.Drawing.Point(101, 118);
+            this.textbox_password.Multiline = true;
             this.textbox_password.Name = "textbox_password";
             this.textbox_password.Size = new System.Drawing.Size(212, 26);
             this.textbox_password.TabIndex = 1;
@@ -62,6 +66,7 @@
             // button_login
             // 
             this.button_login.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_login.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(55)))), ((int)(((byte)(0)))), ((int)(((byte)(78)))));
             this.button_login.Location = new System.Drawing.Point(173, 163);

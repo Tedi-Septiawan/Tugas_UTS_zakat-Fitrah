@@ -57,7 +57,7 @@ namespace zakat_fitrah
                 cmd.Parameters.AddWithValue("@ID", textbox_id.Text);
                 cmd.Parameters.AddWithValue("@NIK", textbox_nik.Text);
                 cmd.Parameters.AddWithValue("@NAMA", textbox_nama.Text);
-                cmd.Parameters.AddWithValue("@TANGGAL", dateTimePicker1.Text);
+                cmd.Parameters.AddWithValue("@TANGGAL", dateTimePicker1.Value);
                 cmd.Parameters.AddWithValue("@JUMLAH_JIWA", textbox_jiwa.Text);
                 cmd.Parameters.AddWithValue("@KUALITAS", textbox_beras.Text);
                 cmd.Parameters.AddWithValue("@TOTAL", textbox_total.Text);
@@ -138,7 +138,7 @@ namespace zakat_fitrah
         {
             textbox_id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             textbox_nik.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textbox_nama.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            textbox_nama.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(); 
             textbox_jiwa.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             textbox_beras.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             textbox_total.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
@@ -235,6 +235,15 @@ namespace zakat_fitrah
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0].DefaultView;
             koneksi.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Terima Kasih Telah Amanah !");
+            Login f = new Login();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }
