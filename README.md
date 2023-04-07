@@ -4,5 +4,8 @@ Ulangan Tengah Semester 4
 
 # Anggota Kelompok
 
-asd
-asd
+Tedi Septiawan,
+Elza Aulia Putri,
+Rania Khoerunisa,
+Amnda Julien Steefania
+Siskanah.
