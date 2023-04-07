@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textbok_username = new System.Windows.Forms.TextBox();
+            this.textbox_username = new System.Windows.Forms.TextBox();
             this.textbox_password = new System.Windows.Forms.TextBox();
             this.button_login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textbok_username
+            // textbox_username
             // 
-            this.textbok_username.Location = new System.Drawing.Point(80, 72);
-            this.textbok_username.Name = "textbok_username";
-            this.textbok_username.Size = new System.Drawing.Size(238, 26);
-            this.textbok_username.TabIndex = 0;
+            this.textbox_username.Location = new System.Drawing.Point(80, 72);
+            this.textbox_username.Name = "textbox_username";
+            this.textbox_username.Size = new System.Drawing.Size(238, 26);
+            this.textbox_username.TabIndex = 0;
+            this.textbox_username.TextChanged += new System.EventHandler(this.textbok_username_TextChanged);
             // 
             // textbox_password
             // 
@@ -55,6 +56,7 @@
             this.button_login.TabIndex = 2;
             this.button_login.Text = "Login";
             this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // Login
             // 
@@ -63,7 +65,7 @@
             this.ClientSize = new System.Drawing.Size(404, 330);
             this.Controls.Add(this.button_login);
             this.Controls.Add(this.textbox_password);
-            this.Controls.Add(this.textbok_username);
+            this.Controls.Add(this.textbox_username);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -73,7 +75,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textbok_username;
+        private System.Windows.Forms.TextBox textbox_username;
         private System.Windows.Forms.TextBox textbox_password;
         private System.Windows.Forms.Button button_login;
     }

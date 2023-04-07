@@ -48,6 +48,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.textbox_username = new System.Windows.Forms.TextBox();
+            this.textbox_password = new System.Windows.Forms.TextBox();
+            this.textbox_cariid = new System.Windows.Forms.TextBox();
+            this.button_admin = new System.Windows.Forms.Button();
+            this.button_cariid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +68,7 @@
             // 
             // button_batal
             // 
-            this.button_batal.Location = new System.Drawing.Point(247, 489);
+            this.button_batal.Location = new System.Drawing.Point(196, 489);
             this.button_batal.Name = "button_batal";
             this.button_batal.Size = new System.Drawing.Size(134, 39);
             this.button_batal.TabIndex = 1;
@@ -83,7 +88,7 @@
             // 
             // button_hapus
             // 
-            this.button_hapus.Location = new System.Drawing.Point(247, 536);
+            this.button_hapus.Location = new System.Drawing.Point(196, 536);
             this.button_hapus.Name = "button_hapus";
             this.button_hapus.Size = new System.Drawing.Size(134, 39);
             this.button_hapus.TabIndex = 3;
@@ -93,7 +98,7 @@
             // 
             // button_total
             // 
-            this.button_total.Location = new System.Drawing.Point(405, 489);
+            this.button_total.Location = new System.Drawing.Point(351, 489);
             this.button_total.Name = "button_total";
             this.button_total.Size = new System.Drawing.Size(134, 86);
             this.button_total.TabIndex = 4;
@@ -224,11 +229,58 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Tanggal";
             // 
+            // textbox_username
+            // 
+            this.textbox_username.Location = new System.Drawing.Point(1301, 489);
+            this.textbox_username.Name = "textbox_username";
+            this.textbox_username.Size = new System.Drawing.Size(265, 26);
+            this.textbox_username.TabIndex = 20;
+            this.textbox_username.TextChanged += new System.EventHandler(this.textbox_username_TextChanged);
+            // 
+            // textbox_password
+            // 
+            this.textbox_password.Location = new System.Drawing.Point(1301, 542);
+            this.textbox_password.Name = "textbox_password";
+            this.textbox_password.Size = new System.Drawing.Size(265, 26);
+            this.textbox_password.TabIndex = 21;
+            // 
+            // textbox_cariid
+            // 
+            this.textbox_cariid.Location = new System.Drawing.Point(515, 495);
+            this.textbox_cariid.Name = "textbox_cariid";
+            this.textbox_cariid.Size = new System.Drawing.Size(136, 26);
+            this.textbox_cariid.TabIndex = 23;
+            // 
+            // button_admin
+            // 
+            this.button_admin.Location = new System.Drawing.Point(985, 489);
+            this.button_admin.Name = "button_admin";
+            this.button_admin.Size = new System.Drawing.Size(294, 79);
+            this.button_admin.TabIndex = 22;
+            this.button_admin.Text = "Tambahkan Admin";
+            this.button_admin.UseVisualStyleBackColor = true;
+            this.button_admin.Click += new System.EventHandler(this.button_admin_Click);
+            // 
+            // button_cariid
+            // 
+            this.button_cariid.Location = new System.Drawing.Point(515, 536);
+            this.button_cariid.Name = "button_cariid";
+            this.button_cariid.Size = new System.Drawing.Size(136, 39);
+            this.button_cariid.TabIndex = 24;
+            this.button_cariid.Text = "Cari ID";
+            this.button_cariid.UseVisualStyleBackColor = true;
+            this.button_cariid.Click += new System.EventHandler(this.button_cariid_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1632, 630);
+            this.Controls.Add(this.button_cariid);
+            this.Controls.Add(this.textbox_cariid);
+            this.Controls.Add(this.button_admin);
+            this.Controls.Add(this.textbox_password);
+            this.Controls.Add(this.textbox_username);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView1);
@@ -250,7 +302,7 @@
             this.Controls.Add(this.button_batal);
             this.Controls.Add(this.button_ubah);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Zakat Fitrah";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -280,6 +332,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textbox_username;
+        private System.Windows.Forms.TextBox textbox_password;
+        private System.Windows.Forms.TextBox textbox_cariid;
+        private System.Windows.Forms.Button button_admin;
+        private System.Windows.Forms.Button button_cariid;
     }
 }
 

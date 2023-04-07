@@ -161,7 +161,7 @@ namespace zakat_fitrah
                 koneksi.Open();
                 MySqlCommand cmd;
                 cmd = koneksi.CreateCommand();
-                //cmd.CommandText = "update zakat1 set NIK=@NIK, JUMLAH_JIWA=@JUMLAH_JIWA, KUWALITAS=@KUALITAS, TOTAL=@TOTAL, where ID=@ID";
+               
                 cmd.CommandText = "update zakat1 set NAMA=@NAMA, NIK=@NIK, TANGGAL=@TANGGAL, JUMLAH_JIWA=@JUMLAH_JIWA, KUWALITAS=@KUALITAS, TOTAL=@TOTAL where ID=@ID";
                 cmd.Parameters.AddWithValue("@ID", textbox_id.Text);
                 cmd.Parameters.AddWithValue("@NIK", textbox_nik.Text);
@@ -191,6 +191,50 @@ namespace zakat_fitrah
             {
                 koneksi.Close();
             }
+        }
+
+        private void button_admin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi.Open();
+                MySqlCommand cmd;
+                cmd = koneksi.CreateCommand();
+                cmd.CommandText = "insert into admin (username, password) values (@username, @password)";
+                cmd.Parameters.AddWithValue("@username", textbox_username.Text);
+                cmd.Parameters.AddWithValue("@password", textbox_password.Text);
+                MessageBox.Show("Data berhasil ditambahkan");
+                cmd.ExecuteNonQuery();
+                textbox_username.Text = "";
+                textbox_password.Text = "";
+                lihatData();
+                koneksi.Close();
+            }
+            catch (Exception c)
+            { }
+        }
+
+        private void textbox_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_cariid_Click(object sender, EventArgs e)
+        {
+
+            koneksi.Open();
+            MySqlCommand cmd;
+            cmd = koneksi.CreateCommand();
+            cmd.CommandText = "SELECT * FROM zakat1 WHERE ID LIKE '%" + textbox_cariid.Text + "%'";
+            cmd.Parameters.AddWithValue("@ID", textbox_cariid.Text);
+
+
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            koneksi.Close();
         }
     }
 }
