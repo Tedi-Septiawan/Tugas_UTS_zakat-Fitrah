@@ -7,5 +7,5 @@ Ulangan Tengah Semester 4
 Tedi Septiawan,
 Elza Aulia Putri,
 Rania Khoerunisa,
-Amnda Julien Steefania
+Amnda Julien Steefania,
 Siskanah.
