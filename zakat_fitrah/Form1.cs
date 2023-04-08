@@ -44,6 +44,7 @@ namespace zakat_fitrah
         private void Form1_Load(object sender, EventArgs e)
         {
             lihatData();
+            
         }
 
         private void button_simpan_Click(object sender, EventArgs e)

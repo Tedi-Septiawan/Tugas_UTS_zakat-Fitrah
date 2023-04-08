@@ -47,6 +47,7 @@ namespace zakat_fitrah
                     MessageBox.Show("Login berhasil!");
                     Form1 f = new Form1();
                     this.Hide();
+                    f.Size = new Size(1676, 820);
                     f.ShowDialog();
                     this.Close();
                 }

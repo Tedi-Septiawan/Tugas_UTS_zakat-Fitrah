@@ -39,14 +39,13 @@
             this.textbox_username.AllowDrop = true;
             this.textbox_username.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textbox_username.CausesValidation = false;
-            this.textbox_username.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.textbox_username.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textbox_username.Location = new System.Drawing.Point(101, 70);
             this.textbox_username.Multiline = true;
             this.textbox_username.Name = "textbox_username";
             this.textbox_username.Size = new System.Drawing.Size(212, 26);
             this.textbox_username.TabIndex = 0;
             this.textbox_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textbox_username.UseWaitCursor = true;
             this.textbox_username.TextChanged += new System.EventHandler(this.textbok_username_TextChanged);
             // 
             // textbox_password
@@ -54,14 +53,14 @@
             this.textbox_password.AllowDrop = true;
             this.textbox_password.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textbox_password.CausesValidation = false;
-            this.textbox_password.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.textbox_password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textbox_password.Location = new System.Drawing.Point(101, 118);
             this.textbox_password.Multiline = true;
             this.textbox_password.Name = "textbox_password";
+            this.textbox_password.PasswordChar = '•';
             this.textbox_password.Size = new System.Drawing.Size(212, 26);
             this.textbox_password.TabIndex = 1;
             this.textbox_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textbox_password.UseWaitCursor = true;
             // 
             // button_login
             // 
@@ -90,8 +89,11 @@
             this.Controls.Add(this.textbox_username);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
